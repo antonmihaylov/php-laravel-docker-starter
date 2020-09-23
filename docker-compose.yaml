@@ -1,4 +1,9 @@
 version: "3.8"
+
+networks:
+  patuvashti:
+    driver: bridge
+
 services:
   app:
     build:
@@ -45,8 +50,28 @@ services:
     networks:
       - patuvashti
 
+  composer:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: composer
+    volumes:
+    - ./src:/var/www/html
+    depends_on:
+      - db
+    networks:
+      - patuvashti
+    entrypoint: ["composer"]
 
-networks:
-  patuvashti:
-    driver: bridge
+  npm:
+    image: node:12-alpine
+    container_name: npm
+    volumes:
+    - ./src:/var/www/html
+    working_dir: /var/www/html
+    entrypoint: ["npm"]
 
+  artisan:
+    build:
+      context: .
+      dockerfile:
