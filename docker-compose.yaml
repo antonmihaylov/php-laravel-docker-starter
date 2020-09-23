@@ -1,0 +1,40 @@
+version: "3.8"
+services:
+  app:
+    build:
+      args:
+        user: anton
+        uid: 1000
+      context: ./
+      dockerfile: Dockerfile
+    image: patuvashti
+    container_name: patuvashti-app
+    restart: unless-stopped
+    working_dir: /var/www/
+    volumes:
+      - ./:/var/www
+    networks:
+      - patuvashti
+
+  db:
+    networks:
+      - patuvashti
+
+  nginx:
+    image: nginx:stable-alpine
+    container_name: patuvashti-nginx
+    ports:
+    - "8080:80"
+    volumes:
+    -
+    depends_on:
+      - app
+      - db
+    networks:
+      - patuvashti
+
+
+networks:
+  patuvashti:
+    driver: bridge
+
