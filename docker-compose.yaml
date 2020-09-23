@@ -26,7 +26,7 @@ services:
     - ./psql:/var/lib/postgresql/data
     environment:
       POSTGRES_USER: patuvashti_dev
-      POSTGRES:DB: patuvashti
+      POSTGRES_DB: patuvashti
       POSTGRES_PASSWORD: ASecretPassword
     networks:
       - patuvashti
