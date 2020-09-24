@@ -11,6 +11,7 @@ A simple starter for Laravel (or other php) applications for complete environmen
   - the development tools - artisan, composer, npm, laravel
  - A build script (./d) for most commong commands
 
+With having all the devopment tools containerized you can have a clean development environment, where you don't have any of them isntalled. That allows for very easy workfolow between several different machines.
 
 # How to use:
 - Clone the repo
