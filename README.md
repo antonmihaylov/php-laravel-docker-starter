@@ -44,5 +44,5 @@ With having all of the devopment tools containerized you can have a clean develo
 This configuration is far from perfect and serves as a starting point for a development environment. It is not yet tested in production, use at your own risk if you're going to deploy any of the docker configurations.
 
 
-Feel free to offer changes and create issues.
+Feel free to offer changes, create issues and make pull requests.
 Have fun coding!
