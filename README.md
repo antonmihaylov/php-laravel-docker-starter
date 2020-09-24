@@ -15,12 +15,16 @@ With having all of the devopment tools containerized you can have a clean develo
 
 # How to use:
 - Clone the repo
+- Note: to use the "./d" script you must give it exec permission using "chmod +x ./d"
 - Build the docker images:
   `docker-compose build`  or `./d build)`
-- To test it - add an simple index.html file in src/public/. 
+- To test it you can:
+    - add an simple index.html file in src/public/. 
     (If you're having problems with permissions inside the src folder do:
  `sudo chmod -R o+rw ./src`)
- 
+        OR
+    - create a laravel app with `./d new laravel`
+
 - Run the containers:
     `docker-compose up -d` or `./d up`
 - Go to localhost:8080 and see if your test html file comes up
