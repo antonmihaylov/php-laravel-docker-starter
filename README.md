@@ -3,6 +3,7 @@ A simple starter for Laravel (or other php) applications for complete environmen
 
 The shell script (./d) is currently designed to work with Linux. Can't guarantee that it will work on other platforms. 
 
+
 # What does it have?
 - Dockerfiles for development tools: 
   - php, artisan, composer, laravel, npm
