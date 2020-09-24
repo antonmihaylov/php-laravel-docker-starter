@@ -70,6 +70,9 @@ services:
     - ./src:/var/www/html
     working_dir: /var/www/html
     entrypoint: ["npm"]
+    ports:
+      - "3000:3000"
+      - "3001:3001"
 
   artisan:
     build:
