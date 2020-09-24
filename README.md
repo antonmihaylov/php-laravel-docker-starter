@@ -44,7 +44,9 @@ With having all of the devopment tools containerized you can have a clean develo
 - `./d clean` - stops running services and builds the images
 - `./d new laravel` - creates a new Laravel application in the src/ directory
 - `./d run *service name* *command*` - creates a container, runs a command in it and closes it. See service names in the docker-compose files (default: app, db, nginx, composer, npm, artisan, laravel. Note that the working dir in the container is the one mapped to the src/ dir. So, for example, to run npm install on a package.json that is in src/package.json you run `./d run npm install`. Note that npm here is the name of the service, the npm is the default entrypoint, so any command is related to the npm runtime.  
-- `./d exec` - the same as run, but executes it on a running container
+- `./d exec *service name* *command*` - the same as run, but executes it on a running container
+- `./d npm *command*` - shortcut for run npm *command*
+- `./d composer *command*` - shortcut for run composer *command*
 
 
 # NOTE!
