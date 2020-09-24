@@ -84,3 +84,15 @@ services:
     entrypoint: ["php", "/var/www/html/artisan"]
     networks:
       - patuvashti
+
+  laravel:
+    build:
+      context: .
+      dockerfile: laravel.dockerfile
+    container_name: laravel
+    volumes:
+      - ./src:/var/www/html
+    user: laravel
+    entrypoint: ["/tmp/vendor/laravel/installer/bin/laravel"]
+    networks:
+      - patuvashti

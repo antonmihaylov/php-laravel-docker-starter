@@ -9,13 +9,7 @@ RUN chown laravel:laravel /var/www/html
 WORKDIR /var/www/html
 
 RUN set -ex \
-  && apk --no-cache add \
+  && apk add \
     postgresql-dev
 
 RUN docker-php-ext-install pdo pgsql pdo_pgsql
-
-## Install laravel cli
-#RUN composer global require laravel/installer
-#
-## Get latest Composer
-#COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
