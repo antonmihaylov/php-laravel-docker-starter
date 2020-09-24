@@ -1,7 +1,7 @@
 version: "3.8"
 
 networks:
-  patuvashti:
+  laravel_docker:
     driver: bridge
 
 services:
@@ -9,45 +9,44 @@ services:
     build:
       context: ./
       dockerfile: php.dockerfile
-    image: patuvashti
-    container_name: patuvashti-app
+    container_name: laravel-docker-app
     volumes:
       - ./src:/var/www/html
     ports:
       - "9000:9000"
     networks:
-      - patuvashti
+      - laravel_docker
 
   db:
     image: postgres:12-alpine
     restart: unless-stopped
-    container_name: patuvashti-db
+    container_name: laravel-docker-db
     tty: true
     ports:
-    - "5432:5432"
+      - "5432:5432"
     volumes:
-    - ./psql:/var/lib/postgresql/data
+      - ./psql:/var/lib/postgresql/data
     environment:
-      POSTGRES_USER: patuvashti_dev
-      POSTGRES_DB: patuvashti
-      POSTGRES_PASSWORD: ASecretPassword
+      POSTGRES_USER: postgres
+      POSTGRES_DB: laravel_docker
+      POSTGRES_PASSWORD:
     networks:
-      - patuvashti
+      - laravel_docker
 
   nginx:
     build:
       context: .
       dockerfile: nginx.dockerfile
-    container_name: patuvashti-nginx
+    container_name: nginx
     ports:
-    - "8080:80"
+      - "8080:80"
     volumes:
       - ./src:/var/www/html
     depends_on:
       - app
       - db
     networks:
-      - patuvashti
+      - laravel_docker
 
   composer:
     build:
@@ -55,21 +54,23 @@ services:
       dockerfile: composer.dockerfile
     container_name: composer
     volumes:
-    - ./src:/var/www/html
+      - ./src:/var/www/html
     depends_on:
       - app
     user: laravel
     networks:
-      - patuvashti
+      - laravel_docker
     entrypoint: ["composer"]
 
   npm:
     image: node:12-alpine
     container_name: npm
     volumes:
-    - ./src:/var/www/html
+      - ./src:/var/www/html
     working_dir: /var/www/html
     entrypoint: ["npm"]
+    networks:
+      laravel_docker
     ports:
       - "3000:3000"
       - "3001:3001"
@@ -80,13 +81,13 @@ services:
       dockerfile: php.dockerfile
     container_name: artisan
     volumes:
-    - ./src:/var/www/html
+      - ./src:/var/www/html
     depends_on:
       - db
     user: laravel
     entrypoint: ["php", "/var/www/html/artisan"]
     networks:
-      - patuvashti
+      - laravel_docker
 
   laravel:
     build:
@@ -98,4 +99,4 @@ services:
     user: laravel
     entrypoint: ["/tmp/vendor/laravel/installer/bin/laravel"]
     networks:
-      - patuvashti
+      - laravel_docker
