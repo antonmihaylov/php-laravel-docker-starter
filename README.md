@@ -20,8 +20,7 @@ With having all of the devopment tools containerized you can have a clean develo
   `docker-compose build`  or `./d build)`
 - To test it you can:
     - add an simple index.html file in src/public/. 
-    (If you're having problems with permissions inside the src folder do:
- `sudo chmod -R o+rw ./src`)
+    (If you're having problems refer to the Troubleshooting section)
         OR
     - create a laravel app with `./d new laravel`
 
@@ -53,8 +52,9 @@ This configuration is far from perfect and serves as a starting point for a deve
 
 The repository was only tested on Linux (Ubuntu 20.0)
 
-If you're having problems with permissions inside the src folder do:
- `sudo chmod -R o+rw ./src`
+# Troubleshooting
+- If you're having problems with permissions inside the src folder run (on your machine):
+ ` sudo chmod -R a+rw src`
 
 Feel free to offer changes, create issues and make pull requests.
 Have fun coding!

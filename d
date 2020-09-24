@@ -6,7 +6,7 @@ shift
 available_commands="build, up, down, rebuild, clean, stop, new, run, exec"
 
 if [ "$first_arg" = "build" ]; then
-    docker-compose build
+    sudo docker-compose build
 elif [ "$first_arg" = "up"  ]; then
     docker-compose up -d
 elif [ "$first_arg" = "down"  ]; then
