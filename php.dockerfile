@@ -5,6 +5,8 @@ RUN addgroup -g 1000 laravel && adduser -G laravel -g laravel -s /bin/sh -D lara
 RUN mkdir -p /var/www/html
 
 RUN chown laravel:laravel /var/www/html
+RUN chmod o+rw /var/www/html
+
 
 WORKDIR /var/www/html
 
