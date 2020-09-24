@@ -43,6 +43,7 @@ With having all of the devopment tools containerized you can have a clean develo
 # NOTE!
 This configuration is far from perfect and serves as a starting point for a development environment. It is not yet tested in production, use at your own risk if you're going to deploy any of the docker configurations.
 
+The repository was only tested on Linux (Ubuntu 20.0)
 
 Feel free to offer changes, create issues and make pull requests.
 Have fun coding!
