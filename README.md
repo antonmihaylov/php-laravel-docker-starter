@@ -5,7 +5,7 @@ A simple starter for Laravel (or other php) applications for complete environmen
 - Dockerfiles for development tools: 
   - php, artisan, composer, laravel, npm
 - Docker-compose configuration for setting up a network of:
-  - a nginx server
+  - a nginx server, serving by default content in src/public/
   - the php application (located in src/)
   - a database, currently configured to Postgres
   - the development tools - artisan, composer, npm, laravel
@@ -17,10 +17,14 @@ With having all of the devopment tools containerized you can have a clean develo
 - Clone the repo
 - Build the docker images:
   `docker-compose build`  or `./d build)`
-- To test it - add an simple index.html file in src/
+- To test it - add an simple index.html file in src/public/. 
+    (If you're having problems with permissions inside the src folder do:
+ `sudo chmod -R o+rw ./src`)
+ 
 - Run the containers:
     `docker-compose up -d` or `./d up`
 - Go to localhost:8080 and see if your test html file comes up
+- If you want to change something, you don't need to rebuild the docker images or to restart the containers. Just edit the html file and refresh your browser.
 - Shut down the containers:
   `docker-compose down` or `./d down`
   
@@ -44,6 +48,9 @@ With having all of the devopment tools containerized you can have a clean develo
 This configuration is far from perfect and serves as a starting point for a development environment. It is not yet tested in production, use at your own risk if you're going to deploy any of the docker configurations.
 
 The repository was only tested on Linux (Ubuntu 20.0)
+
+If you're having problems with permissions inside the src folder do:
+ `sudo chmod -R o+rw ./src`
 
 Feel free to offer changes, create issues and make pull requests.
 Have fun coding!
