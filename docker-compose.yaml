@@ -70,7 +70,7 @@ services:
     working_dir: /var/www/html
     entrypoint: ["npm"]
     networks:
-      laravel_docker
+      - laravel_docker
     ports:
       - "3000:3000"
       - "3001:3001"
