@@ -16,95 +16,11 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e891712c-6f76-4f4a-b302-63562f1b228b" name="Default Changelist" comment="Added more docker images for cleaner dev">
-      <change afterPath="$PROJECT_DIR$/d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel.dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/.env.example" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/.styleci.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/Console/Kernel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/Exceptions/Handler.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Controller.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/Http/Kernel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/Http/Middleware/Authenticate.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/Http/Middleware/EncryptCookies.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/Http/Middleware/PreventRequestsDuringMaintenance.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/Http/Middleware/TrimStrings.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/Http/Middleware/TrustHosts.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/Http/Middleware/TrustProxies.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/Http/Middleware/VerifyCsrfToken.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/Models/User.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/Providers/AuthServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/Providers/BroadcastServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/Providers/EventServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/artisan" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bootstrap/app.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bootstrap/cache/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/composer.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config/app.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config/auth.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config/broadcasting.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config/cache.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config/cors.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config/database.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config/filesystems.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config/hashing.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config/logging.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config/mail.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config/queue.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config/services.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config/session.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config/view.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/factories/UserFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/migrations/2014_10_12_100000_create_password_resets_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/phpunit.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/public/.htaccess" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/public/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/public/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/public/web.config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/css/app.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/js/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/lang/en/auth.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/lang/en/pagination.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/lang/en/passwords.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/lang/en/validation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/views/welcome.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/api.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/channels.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/console.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/web.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/server.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/storage/app/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/storage/app/public/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/storage/framework/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/storage/framework/cache/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/storage/framework/cache/data/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/storage/framework/sessions/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/storage/framework/testing/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/storage/framework/views/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/storage/logs/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/CreatesApplication.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/Feature/ExampleTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/TestCase.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/Unit/ExampleTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/webpack.mix.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aliases.sh" beforeDir="false" afterPath="$PROJECT_DIR$/aliases.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php.dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/php.dockerfile" afterDir="false" />
+    <list default="true" id="e891712c-6f76-4f4a-b302-63562f1b228b" name="Default Changelist" comment="Added build scripts for common docker commands. Fixed laravel dockerfile">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/d" beforeDir="false" afterPath="$PROJECT_DIR$/d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel.dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/laravel.dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -354,7 +270,7 @@
       <workItem from="1600855261972" duration="10645000" />
       <workItem from="1600874988233" duration="761000" />
       <workItem from="1600875755940" duration="9965000" />
-      <workItem from="1600933929637" duration="3977000" />
+      <workItem from="1600933929637" duration="6658000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1600850961057</created>
@@ -405,7 +321,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600894488448</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added more docker images for cleaner dev">
+      <created>1600938008004</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1600938008004</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -442,8 +365,8 @@
     <MESSAGE value="Added base docker configuration" />
     <MESSAGE value="Created Laravel app." />
     <MESSAGE value="Reset src" />
-    <MESSAGE value="Added more docker images for cleaner dev" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added more docker images for cleaner dev" />
+    <MESSAGE value="Added build scripts for common docker commands. Fixed laravel dockerfile" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added build scripts for common docker commands. Fixed laravel dockerfile" />
   </component>
   <component name="WindowStateProjectService">
     <state x="586" y="231" width="800" height="684" key="#Docker" timestamp="1600852992826">
@@ -463,11 +386,19 @@
     </state>
     <state x="454" y="211" width="1084" height="708" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1600853135442" />
     <state x="454" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.1848.1053/72.27.1848.1053@72.27.1848.1053" timestamp="1600878528556" />
+    <state x="597" y="223" width="788" height="668" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1600940565666">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="597" y="223" width="788" height="668" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/72.27.1848.1053/72.27.1848.1053@72.27.1848.1053" timestamp="1600940565666" />
     <state x="767" y="296" width="424" height="491" key="FileChooserDialogImpl" timestamp="1600875745074">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="767" y="296" width="447" height="520" key="FileChooserDialogImpl/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1600871041814" />
     <state x="767" y="296" width="424" height="491" key="FileChooserDialogImpl/72.27.1848.1053/72.27.1848.1053@72.27.1848.1053" timestamp="1600875745074" />
+    <state x="797" y="457" key="Git.Rebase.Log.Action.NewCommitMessage.Dialog" timestamp="1600938057521">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="797" y="457" key="Git.Rebase.Log.Action.NewCommitMessage.Dialog/72.27.1848.1053/72.27.1848.1053@72.27.1848.1053" timestamp="1600938057521" />
     <state x="172" y="127" width="1648" height="853" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1600868477918">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>

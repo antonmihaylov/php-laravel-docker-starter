@@ -8,16 +8,14 @@ available_commands="build, up, down, rebuild, clean, stop, new, run, exec"
 if [ "$first_arg" = "build" ]; then
     docker-compose build
 elif [ "$first_arg" = "up"  ]; then
-    docker-compose up
+    docker-compose up -d
 elif [ "$first_arg" = "down"  ]; then
     docker-compose down
 elif [ "$first_arg" = "rebuild"  ]; then
     sudo docker-compose down && sudo docker-compose build && docker-compose up -d
 elif [ "$first_arg" = "clean"  ]; then
     sudo docker-compose down && sudo docker-compose build
-elif [ "$first_arg" = "stop"  ]; then
-    docker-compose down
-elif [ "$first_arg" = "new"  ]; then
+elif [ "$first_arg" = "new" ] && [ "$2" == "laravel" ]; then
   docker-compose run --rm --entrypoint=composer laravel create-project --prefer-dist laravel/laravel .
 elif [ "$first_arg" = "run"  ]; then
   docker-compose run --rm "$@"
