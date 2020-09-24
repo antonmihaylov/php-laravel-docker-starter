@@ -54,7 +54,7 @@ The repository was only tested on Linux (Ubuntu 20.0)
 
 # Troubleshooting
 - If you're having problems with permissions inside the src folder run (on your machine):
- ` sudo chmod -R a+rw src`
+ ` sudo chmod -R a+rw src`. Note - you need to rerun this if you've generated a Laravel app.
 
 Feel free to offer changes, create issues and make pull requests.
 Have fun coding!
