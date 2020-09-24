@@ -47,6 +47,7 @@ With having all of the devopment tools containerized you can have a clean develo
 - `./d exec *service name* *command*` - the same as run, but executes it on a running container
 - `./d npm *command*` - shortcut for run npm *command*
 - `./d composer *command*` - shortcut for run composer *command*
+- `./d artisan *command*` - shortcut for run artisan *command*
 
 
 # NOTE!
