@@ -15,7 +15,7 @@ elif [ "$first_arg" = "rebuild"  ]; then
     sudo docker-compose down && sudo docker-compose build && docker-compose up -d
 elif [ "$first_arg" = "clean"  ]; then
     sudo docker-compose down && sudo docker-compose build
-elif [ "$first_arg" = "new" ] && [ "$2" == "laravel" ]; then
+elif [ "$first_arg" = "new" ] && [ "$1" == "laravel" ]; then
   docker-compose run --rm --entrypoint=composer laravel create-project --prefer-dist laravel/laravel .
 elif [ "$first_arg" = "run"  ]; then
   docker-compose run --rm "$@"
