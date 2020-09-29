@@ -27,6 +27,10 @@ elif [ "$first_arg" = "composer"  ]; then
   docker-compose run --rm composer "$@"
 elif [ "$first_arg" = "artisan"  ]; then
   docker-compose run --rm artisan "$@"
+elif [ "$first_arg" = "a"  ]; then
+  docker-compose run --rm artisan "$@"
+elif [ "$first_arg" = "perm"  ]; then
+  sudo chmod -R a+rw src
 elif [ -z "$first_arg" ]; then
       echo "Enter a command. Available commands: $available_commands"
 else

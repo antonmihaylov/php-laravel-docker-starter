@@ -50,6 +50,8 @@ With having all of the devopment tools containerized you can have a clean develo
 - `./d npm *command*` - shortcut for run npm *command*
 - `./d composer *command*` - shortcut for run composer *command*
 - `./d artisan *command*` - shortcut for run artisan *command*
+- `./d a *command*` - shortcut for run artisan *command*
+- `./d perm` - shortcut for sudo chmod -R a+rw src
 
 
 # NOTE!
