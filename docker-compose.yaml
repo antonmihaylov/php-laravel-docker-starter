@@ -1,26 +1,25 @@
 version: "3.8"
 
 networks:
-  laravel_docker:
+  default:
     driver: bridge
+    name: ${APP_NAME}
 
 services:
   app:
     build:
-      context: ./
+      context: ${PATH_TO_APP}
       dockerfile: php.dockerfile
-    container_name: laravel-docker-app
+    container_name: ${APP_NAME}-app
     volumes:
-      - ./src:/var/www/html
+      - ${PATH_TO_APP}:/var/www/html
     ports:
       - "9000:9000"
-    networks:
-      - laravel_docker
 
   db:
     image: postgres:12-alpine
     restart: unless-stopped
-    container_name: laravel-docker-db
+    container_name: ${APP_NAME}-db
     tty: true
     ports:
       - "5432:5432"
@@ -30,47 +29,39 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_DB: laravel_docker
       POSTGRES_PASSWORD:
-    networks:
-      - laravel_docker
 
   nginx:
     build:
       context: .
       dockerfile: nginx.dockerfile
-    container_name: nginx
+    container_name: ${APP_NAME}-nginx
     ports:
       - "8080:80"
     volumes:
-      - ./src:/var/www/html
+      - ${PATH_TO_APP}:/var/www/html
     depends_on:
       - app
       - db
-    networks:
-      - laravel_docker
 
   composer:
     build:
       context: .
       dockerfile: composer.dockerfile
-    container_name: composer
+    container_name: ${APP_NAME}-composer
     volumes:
-      - ./src:/var/www/html
+      - ${PATH_TO_APP}:/var/www/html
     depends_on:
       - app
     user: laravel
-    networks:
-      - laravel_docker
     entrypoint: ["composer"]
 
   npm:
     image: node:12-alpine
-    container_name: npm
+    container_name: ${APP_NAME}-npm
     volumes:
-      - ./src:/var/www/html
+      - ${PATH_TO_APP}:/var/www/html
     working_dir: /var/www/html
     entrypoint: ["npm"]
-    networks:
-      - laravel_docker
     ports:
       - "3000:3000"
       - "3001:3001"
@@ -79,24 +70,20 @@ services:
     build:
       context: .
       dockerfile: php.dockerfile
-    container_name: artisan
+    container_name: ${APP_NAME}-artisan
     volumes:
-      - ./src:/var/www/html
+      - ${PATH_TO_APP}:/var/www/html
     depends_on:
       - db
     user: laravel
     entrypoint: ["php", "/var/www/html/artisan"]
-    networks:
-      - laravel_docker
 
   laravel:
     build:
       context: .
       dockerfile: laravel.dockerfile
-    container_name: laravel
+    container_name: ${APP_NAME}-laravel
     volumes:
-      - ./src:/var/www/html
+      - ${PATH_TO_APP}:/var/www/html
     user: laravel
     entrypoint: ["/tmp/vendor/laravel/installer/bin/laravel"]
-    networks:
-      - laravel_docker

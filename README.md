@@ -7,24 +7,30 @@ The shell script (./d) is currently designed to work with Linux. Can't guarantee
 - Dockerfiles for development tools: 
   - php, artisan, composer, laravel, npm
 - Docker-compose configuration for setting up a network of:
-  - a nginx server, serving by default content in src/public/
-  - the php application (located in src/)
+  - a nginx server, serving by default content from the {PATH_TO_APP}/public/
+  - the php application
   - a database, currently configured to Postgres
-  - the development tools - artisan, composer, npm, laravel
- - A build script (./d) for most commong commands
+  - development tools - artisan, composer, npm, laravel
+ - A build script (./d) for the most common commands
 
-With having all of the devopment tools containerized you can have a clean development environment, where you don't need to install any of them on your machine. That allows for very easy workfolow between several different machines and minimises conflicts when working with multiple projects
+With having all the development tools containerized you can have a clean development environment, where you don't need to install any of them on your machine. That allows for very easy workfolow between several different machines and minimises conflicts when working with multiple projects
 
 # How to use:
-- Clone the repo
-- Note: to use the "./d" script you must give it exec permission using "chmod +x ./d"
+- Clone the repo (usually in a folder inside your root app folder, e.g. my-app/php-laravel-docker-starter)
+- cd into the folder
+    - Note: to use the "./d" script you must give it exec permission using "chmod +x ./d"
+    - Note 2: if you're on linux you can create a link from your app root to the ./d file, so that you can call it from the app root. While in your app root call `ln php-laravel-docker-starter/d` 
 - Build the docker images:
   `docker-compose build`  or `./d build)`
+- Set your variables in .env:
+    - APP_NAME - this is the name of your app. Will be used to name the docker containers
+    - PATH_TO_APP - an absolute or relative path to your app root
 - To test it you can:
-    - add an simple index.html file in src/public/. 
+    - add an simple index.html file in {PATH_TO_APP}/public/ 
     (If you're having problems refer to the Troubleshooting section)
         OR
     - create a laravel app with `./d new laravel`
+    - Note that all containers have their workdir set to the PATH_TO_APP
 
 - Run the containers:
     `docker-compose up -d` or `./d up`
@@ -57,11 +63,11 @@ With having all of the devopment tools containerized you can have a clean develo
 # NOTE!
 This configuration is far from perfect and serves as a starting point for a development environment. It is not yet tested in production, use at your own risk if you're going to deploy any of the docker configurations.
 
-The repository was only tested on Linux (Ubuntu 20.0)
+The repository is tested only on Linux (Ubuntu 20.0)
 
 # Troubleshooting
 - If you're having problems with permissions inside the src folder run (on your machine):
- ` sudo chmod -R a+rw src`. Note - you need to rerun this if you've generated a Laravel app.
+ ` sudo chmod -R a+rw src`. Since that can happen often, there is a shortcut - `./d perm` Note - you need to rerun this if you've generated a Laravel app.
 
 Feel free to offer changes, create issues and make pull requests.
 Have fun coding!
