@@ -8,7 +8,7 @@ networks:
 services:
   app:
     build:
-      context: ${PATH_TO_APP}
+      context: .
       dockerfile: php.dockerfile
     container_name: ${APP_NAME}-app
     volumes:
